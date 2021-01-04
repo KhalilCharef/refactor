@@ -7,7 +7,9 @@ const app = express();
 const PORT = 4000;
 // DB Config
 let User = require('./users.model');
-
+app.get('/', (req, res) => {
+    res.send('hey')
+})
 // Middlwares
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json())
